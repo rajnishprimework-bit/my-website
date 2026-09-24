@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE STUDY CAMPUS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons / FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. INTRO / SPLASH SCREEN -->
+    <div id="introScreen" class="overlay-screen">
+        <div class="intro-box">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <h1>FREE STUDY CAMPUS</h1>
+            <p>Empowering Quality Education For Every Student</p>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- 2. PIN LOCK SCREEN -->
+    <div id="lockScreen" class="overlay-screen hidden">
+        <div class="lock-card">
+            <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+            <span class="security-badge"><i class="fa-solid fa-shield-halved"></i> CAMPUS SECURITY CHECK</span>
+            <h2>Student Access Lock</h2>
+            <p>Enter your access PIN to continue</p>
+            
+            <div class="input-group">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" id="pinInput" placeholder="Enter access PIN...">
+            </div>
+            
+            <button onclick="unlockPortal()" class="btn-primary">
+                <i class="fa-solid fa-unlock"></i> UNLOCK ACCESS
+            </button>
+        </div>
+    </div>
+
+    <!-- 3. MAIN PORTAL CONTENT -->
+    <div id="mainContent" class="hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                    <h2>FREE STUDY</h2>
+                    <span>CAMPUS</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="portal-badge">⚡ Next-Generation Open Learning Portal</span>
+            <h1>Empowering Your Future with <span>FREE STUDY CAMPUS</span></h1>
+            <p>A modern, premier educational space delivering top-tier learning batches.</p>
+            
+            <!-- Search Bar -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" oninput="filterBatches()" placeholder="Search by name or code...">
+            </div>
+        </section>
+
+        <!-- Batches Grid -->
+        <section class="batches-section">
+            <h3>Curated Batches</h3>
+            <div id="batchContainer" class="grid-container">
+                <!-- Batches JS se dynamic render honge -->
+            </div>
+        </section>
+
+        <!-- Telegram Join Footer Banner -->
+        <footer class="telegram-banner">
+            <i class="fa-brands fa-telegram tg-icon"></i>
+            <h3>FREE STUDY CAMPUS</h3>
+            <p>Join our Telegram channel for updates and new batch links.</p>
+            <a href="https://t.me/your_channel_link" target="_blank" class="btn-telegram">
+                <i class="fa-paper-plane"></i> JOIN MY TELEGRAM
+            </a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
